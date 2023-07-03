@@ -62,3 +62,5 @@ collision_mask = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CollisionDetectArea"]
 shape = SubResource("CircleShape2D_oytrd")
+
+[connection signal="area_entered" from="CollisionDetectArea" to="." method="_on_collision_detect_area_area_entered"]

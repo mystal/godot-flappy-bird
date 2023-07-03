@@ -1,6 +1,8 @@
 extends CharacterBody2D
 class_name Bird
 
+signal scored()
+
 const GRAVITY: float = 650.0
 const MAX_FALL_SPEED: float = 400.0
 const JUMP_SPEED: float = -230.0
@@ -61,3 +63,7 @@ func reset():
 	_sprite.play()
 	collision_layer = _default_collision_layer
 	collision_mask = _default_collision_mask
+
+func _on_collision_detect_area_area_entered(area: Area2D):
+	if area.is_in_group("score"):
+		scored.emit()

@@ -2,6 +2,7 @@ extends Node2D
 
 @onready var _pipes: Array = [$Pipe1, $Pipe2]
 @onready var _bird: Bird = $Bird
+@onready var _score_label: Label = $Control/ScoreLabel
 
 func _ready():
 	for pipe in _pipes:
@@ -20,3 +21,8 @@ func reset():
 		pipe.reset()
 	_bird.reset()
 	Globals.reset()
+	_score_label.text = "0"
+
+func _on_bird_scored():
+	Globals.score += 1
+	_score_label.text = str(Globals.score)
