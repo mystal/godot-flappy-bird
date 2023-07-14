@@ -7,3 +7,7 @@ trim_trailing_whitespace = true
 
 [*.md]
 indent_size = 2
+
+[*.gd]
+indent_style = tab
+indent_size = 4
