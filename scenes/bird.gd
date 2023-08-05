@@ -1,5 +1,5 @@
-extends CharacterBody2D
 class_name Bird
+extends CharacterBody2D
 
 signal scored()
 

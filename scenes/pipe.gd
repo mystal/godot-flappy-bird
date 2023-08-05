@@ -1,5 +1,5 @@
-extends AnimatableBody2D
 class_name Pipe
+extends AnimatableBody2D
 
 const PIPE_SPEED: float = 80.0
 const PIPE_END_X: float = -30.0
